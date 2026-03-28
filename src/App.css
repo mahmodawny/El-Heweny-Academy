@@ -1,2 +1,84 @@
-main {
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ccc7c7;
+  font-family: sans-serif;
+}
+
+header{
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 1rem
+}
+
+main{
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  display: flex;
+}
+
+.posts{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 1rem;
+}
+
+.post{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 600px;
+  font-family: sans-serif;
+}
+
+.post-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem
+}
+
+.post-title h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+.post-icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  color: #222;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.post-icons svg{
+  margin-right: 1rem;
+}
+
+.post-icons svg:hover{
+  color: #ff0000;
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
