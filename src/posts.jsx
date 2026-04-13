@@ -1,40 +1,156 @@
 import { FaHeart, FaComment, FaShare } from "react-icons/fa";
+import { useState } from "react";
+export default function Posts() {
+  const hadithTypes = [
+    {
+      id: 1,
+      title: "الحديث الصحيح",
+      category: "مقبول",
+      description: "ما اتصل سنده بنقل العدل الضابط عن مثله إلى منتهاه ولا يكون شاذاً ولا معللاً."
+    },
+    {
+      id: 2,
+      title: "الحديث الحسن",
+      category: "مقبول",
+      description: "ما اتصل سنده بنقل عدل خفيف الضبط عن مثله إلى منتهاه وسلم من الشذوذ والعلة."
+    },
+    {
+      id: 3,
+      title: "الحديث الضعيف",
+      category: "مردود",
+      description: "ما لم يجتمع فيه صفات القبول (الصحيح والحسن) بفقد أحد شروطهما."
+    },
+    {
+      id: 4,
+      title: "الحديث الموضوع",
+      category: "مردود",
+      description: "هو الكذب المختلق المصنوع المنسوب إلى رسول الله ﷺ زوراً وبهتاناً."
+    },
+    {
+      id: 5,
+      title: "الحديث المتواتر",
+      category: "مقبول قطعي",
+      description: "ما رواه جمع غفير تحيل العادة تواطؤهم على الكذب من أول السند إلى آخره."
+    },
+    {
+      id: 6,
+      title: "الحديث المرسل",
+      category: "مردود (غالباً)",
+      description: "ما رفعه التابعي إلى النبي ﷺ مباشرة بسقوط الصحابي من السند."
+    },
+    {
+      id: 7,
+      title: "الحديث المعضل",
+      category: "مردود",
+      description: "ما سقط من سنده راويان فأكثر على التوالي في أي موضع كان."
+    },
+    {
+      id: 8,
+      title: "الحديث القدسي",
+      category: "قد يكون صحيحا او ضعيفا او موضوعا",
+      description: "ما رواه النبي ﷺ عن ربه عز وجل بلفظه هو، مع نسبته لله سبحانه."
+    }
+  ];
 
-export default function Posts(){
-    const posts =[
-      {id:1,date:"1/6/2023", title:"Sports", text:"Real Madrid wins the Champions League" },
-      {id:2,date:"3/7/2023", title:"Politics", text:"The new president of the United States is Joe Biden" },
-      {id:3,date:"10/9/2023", title:"Technology", text:"The new iPhone 12 is released" },
-      {id:4,date:"15/10/2023", title:"Science", text:"The new discovery of the year is the new planet" },
-      {id:5, date:"20/12/2023" ,title:"Health", text:"The new vaccine is released" },
-      {id:6, date:"25/12/2023" ,title:"Entertainment", text:"The new movie is released" }
-    ]
-  
+  const [comments, setComments] = useState({});
+  const [showInput, setShowInput] = useState({});
 
-  return(
-    
+  // add comment...
+  const addComment = (postId, text) => {
+    if (!text.trim()) return;
+
+    setComments({
+      ...comments,
+      [postId]: [...(comments[postId] || []), text],
+    });
+  };
+
+  // onpen and close input...
+
+  const toggleInput = (postId) => {
+    setShowInput({
+      ...showInput,
+      [postId]: !showInput[postId],
+    });
+  };
+
+  // add like...
+  const [likes, setLikes] = useState({});
+  const addLike = (postId) => {
+    setLikes({
+      ...likes,
+      [postId]: !likes[postId],
+    });
+  };
+  console.log(likes)
+  // add share...
+
+  const [shares, setShares] = useState({});
+
+  const addShare = (postId) => {
+    setShares({
+      ...shares,
+      [postId]: (shares[postId] || 0) + 1,
+    });
+  };
+
+  return (
     <div className="posts">
-      <h1>Posts</h1>
-      {
-        posts.map((post) =>{
-          return(
-            <div className="post" key={post.id}>
-              <div className="post-title">
+      <h1>مصطلح الحديث</h1>
+      {hadithTypes.map((post) => {
+        return (
+          <div className="post" key={post.id}>
+            <div className="post-title">
               <h2>{post.title}</h2>
-                <p>{post.date}</p>
-              </div>
-              <p>{post.text}</p>
-              <div className="post-icons">
-                <FaHeart />
-                <FaComment onClick={()=>{
-                  alert("Comment")
-                }}/>
-                <FaShare />
-              </div>
+              <p>{post.category}</p>
             </div>
-          )
-        })
-      }
+            <p>{post.description}</p>
+            <div className="post-icons">
+              <FaHeart
+                onClick={() => addLike(post.id)}
+                style={{
+                  color: likes[post.id] ? "red" : "#777",
+                  transform: likes[post.id] ? "scale(1.2)" : "scale(1)",
+                  transition: "0.2s",
+                  cursor: "pointer"
+                }}
+                />
+              <FaComment onClick={() => toggleInput(post.id)} />
+              <FaShare onClick={() => addShare(post.id)} />
+            </div>
+            <div className="comment-count">
+              <p>{likes[post.id] || 0} likes</p>
+              <p>{comments[post.id]?.length || 0} comments</p>
+              <p>{shares[post.id] || 0} shares</p>
+            </div>
+            {/* comment input */}
+
+            {showInput[post.id] && (
+              <div className="comment-input">
+                <input
+                  type="text"
+                  placeholder="Add a comment..."
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      addComment(post.id, e.target.value);
+                      e.target.value = "";
+                    }
+                  }}
+                />
+              </div>
+            )}
+
+            {/* comments */}
+            <div className="comments">
+              {(comments[post.id] || []).map((comment, index) => (
+                <div className="comment" key={index}>
+                  <p>{comment}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </div>
-  )
+  );
 }
