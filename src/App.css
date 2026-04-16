@@ -385,21 +385,30 @@ nav ul li.active {
 }
 
 .lesson-info h2 , .book-info h2{
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
 }
 
 .lesson-info a,.book-info a{
   text-decoration: none;
-  color: var(--primary);
-  font-size: 0.9rem;
-  font-weight: 700;
-  transition: 0.2s;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .lesson-info a:hover,.book-info a:hover{
-  color: var(--primary-dark);
-  text-decoration: underline;
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.35);
 }
 
 
