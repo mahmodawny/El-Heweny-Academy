@@ -18,12 +18,7 @@ export default function Feedback() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setFeedbacks([...feedbacks, formData]);
-
-    setFormData({
-      name: "",
-      email: "",
-      feedback: "",
-    });
+    setFormData({ name: "", email: "", feedback: "" });
   };
 
   return (
@@ -32,9 +27,9 @@ export default function Feedback() {
 
       <form onSubmit={handleSubmit} className="feedback-info">
         <label>
-          Your name
+          الاسم
           <input
-            placeholder="Enter your name"
+            placeholder="أدخل اسمك"
             type="text"
             name="name"
             value={formData.name}
@@ -44,9 +39,9 @@ export default function Feedback() {
         </label>
 
         <label>
-          Your email
+          البريد الإلكتروني
           <input
-            placeholder="Enter your email"
+            placeholder="أدخل بريدك الإلكتروني"
             type="email"
             name="email"
             value={formData.email}
@@ -55,9 +50,9 @@ export default function Feedback() {
         </label>
 
         <label>
-          Your feedback
+          رسالتك
           <textarea
-            placeholder="Enter your feedback"
+            placeholder="اكتب رسالتك هنا..."
             name="feedback"
             value={formData.feedback}
             onChange={handleChange}
@@ -65,7 +60,7 @@ export default function Feedback() {
           />
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit">إرسال</button>
       </form>
 
       <div className="feedback-container">
