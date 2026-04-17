@@ -1,36 +1,40 @@
+import { Link } from "react-router-dom";
 import ElBokhary from "./assets/ElBokhary.jpg";
 import Muslim from "./assets/Muslim.jpg";
 import AboDawood from "./assets/Abo Dawood.jpg";
 import El_Termithy from "./assets/El-Termithy.jpg";
 import El_nassaey from "./assets/El-nassaey.jpg";
 import IbnMajah from "./assets/Ibn Majah.jpg";
+
 export default function Books() {
   const booksData = [
-    { id: 1, title: "صحيح البخاري", img: ElBokhary, url: "" },
-    { id: 2, title: "صحيح مسلم", img: Muslim, url: "" },
-    { id: 3, title: "صحيح ابن ماجه", img: IbnMajah, url: "" },
-    { id: 4, title: "صحيح أبو داود", img: AboDawood, url: "" },
-    { id: 5, title: "صحيح الترمذي", img: El_Termithy, url: "" },
-    { id: 6, title: "صحيح النسائي", img: El_nassaey, url: "" },
+    { id: "bukhari", title: "صحيح البخاري",  img: ElBokhary,    hasViewer: true  },
+    { id: "muslim",  title: "صحيح مسلم",     img: Muslim,       hasViewer: false },
+    { id: "ibnmajah",title: "صحيح ابن ماجه", img: IbnMajah,     hasViewer: false },
+    { id: "dawood",  title: "صحيح أبو داود",  img: AboDawood,    hasViewer: false },
+    { id: "termithy",title: "صحيح الترمذي",  img: El_Termithy,  hasViewer: false },
+    { id: "nassaey", title: "صحيح النسائي",   img: El_nassaey,   hasViewer: false },
   ];
 
   return (
     <div className="books">
       <h1>كتب</h1>
       <div className="books-container">
-        {booksData.map((book) => {
-          return (
-            <div className="book" key={book.id}>
-              <img src={book.img} alt="book" />
-              <div className="book-info">
-                <h2>{book.title}</h2>
-                <a href={book.url} target="_blank" rel="noopener noreferrer">
+        {booksData.map((book) => (
+          <div className="book" key={book.id}>
+            <img src={book.img} alt={book.title} />
+            <div className="book-info">
+              <h2>{book.title}</h2>
+              {book.hasViewer ? (
+                <Link to={`/book/${book.id}`} className="view-link">
                   مشاهدة
-                </a>
-              </div>
+                </Link>
+              ) : (
+                <span className="view-link disabled">قريباً</span>
+              )}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

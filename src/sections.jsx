@@ -19,6 +19,9 @@ export default function Sections(){
          <li>
            <Link to="/lessons">دروس مصطلح الحديث</Link>
          </li>
+         <li>
+           <Link to="/">أحاديث منتشرة لا تصح</Link>
+         </li>
        </ul>
      </nav>
    )
