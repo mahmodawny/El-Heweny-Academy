@@ -8,8 +8,8 @@ const volumes = [
     name: "bukhari",
     title : "صحيح البخاري",
     books: [
-      { id: 1, label: "المجلد الأول",  file: "مجلد1.pdf" },
-      { id: 2, label: "المجلد الثاني", file: "مجلد2.pdf" }
+      { id: 1, label: "المجلد الأول",  file: "vol1.pdf" },
+      { id: 2, label: "المجلد الثاني", file: "vol2.pdf" }
     ]
   },
   {
@@ -31,7 +31,9 @@ export default function BookViewer() {
   const currentBook = volumes.find((book) => book.name === id)
   
 
-  const pdfUrl = selected ? `/pdfs/${id}/${selected.file}` : null;
+  const pdfUrl = selected
+    ? `/pdfs/${id}/${selected.file}`
+    : null;
   
   return (
     <div className="book-viewer">
@@ -63,12 +65,19 @@ export default function BookViewer() {
                   ⬇ تحميل
                 </a>
               </div>
-              <iframe
+              <object
                 key={pdfUrl}
-                src={pdfUrl}
-                title={selected.label}
+                data={pdfUrl}
+                type="application/pdf"
                 className="pdf-iframe"
-              />
+              >
+                <div className="pdf-fallback">
+                  <p>المتصفح لا يدعم عرض PDF مباشرة</p>
+                  <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="view-link">
+                    فتح الملف في تبويب جديد
+                  </a>
+                </div>
+              </object>
             </>
           ) : (
             <div className="pdf-placeholder">
