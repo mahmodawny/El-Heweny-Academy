@@ -829,6 +829,29 @@ main {
   color: var(--primary-dark);
 }
 
+.pdf-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.open-btn {
+  text-decoration: none;
+  background: transparent;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1.5px solid var(--primary);
+  transition: all 0.2s;
+}
+
+.open-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 .download-btn {
   text-decoration: none;
   background: var(--gold);
