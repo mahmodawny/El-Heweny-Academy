@@ -11,7 +11,7 @@ export default function Books() {
     { id: "bukhari", title: "صحيح البخاري",  img: ElBokhary,    hasViewer: true  },
     { id: "muslim",  title: "صحيح مسلم",     img: Muslim,       hasViewer: true },
     { id: "ibnmajah",title: "صحيح ابن ماجه", img: IbnMajah,     hasViewer: false },
-    { id: "dawood",  title: "صحيح أبو داود",  img: AboDawood,    hasViewer: false },
+    { id: "aboDawood", title: "مسند أبو داود", img: AboDawood,   hasViewer: true },
     { id: "termithy",title: "صحيح الترمذي",  img: El_Termithy,  hasViewer: false },
     { id: "nassaey", title: "صحيح النسائي",   img: El_nassaey,   hasViewer: false },
   ];

@@ -28,6 +28,18 @@ const allBooks = [
       { id: 3, label: "المجلد الثالث", file: "vol3.pdf" },
     ],
   },
+  {
+    name :"aboDawood",
+    title: "مسند أبو داود",
+    volumes:[
+      { id: 1, label: "المجلد الأول",  file: "vol1.pdf" },
+      { id: 2, label: "المجلد الثاني", file: "vol2.pdf" },
+      { id: 3, label: "المجلد الثالث", file: "vol3.pdf" },
+      { id: 4, label: "المجلد الرابع", file: "vol4.pdf" },
+      { id: 5, label: "المجلد الخامس", file: "vol5.pdf" },
+      { id: 6, label: "المجلد السادس", file: "vol6.pdf" }
+    ]
+  }
 ];
 
 export default function BookViewer() {
