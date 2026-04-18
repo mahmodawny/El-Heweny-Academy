@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+
 const volumes = [
   {
     id: 1,
     name: "bukhari",
-    title: "صحيح البخاري",
+    title : "صحيح البخاري",
     books: [
       { id: 1, label: "المجلد الأول",  file: "مجلد1.pdf" },
       { id: 2, label: "المجلد الثاني", file: "مجلد2.pdf" }
@@ -14,8 +15,8 @@ const volumes = [
   {
     id: 2,
     name: "muslim",
-    title: "صحيح مسلم",
-    books: [
+    title : "صحيح مسلم",
+    books:[
       { id: 1, label: "المجلد الأول",  file: "صحيح مسلم 1.pdf" },
       { id: 2, label: "المجلد الثاني", file: "صحيح مسلم 2.pdf" },
       { id: 3, label: "المجلد الثالث", file: "صحيح مسلم 3.pdf" }
@@ -24,15 +25,14 @@ const volumes = [
 ];
 
 export default function BookViewer() {
-  const { id } = useParams();
+  const {id} = useParams();
   const [selected, setSelected] = useState(null);
 
-  const currentBook = volumes.find((vol) => vol.name === id);
+  const currentBook = volumes.find((book) => book.name === id)
+  
 
-  const pdfUrl = selected
-    ? `/pdfs/${id}/${selected.file}`
-    : null;
-
+  const pdfUrl = selected ? `/pdfs/${id}/${selected.file}` : null;
+  
   return (
     <div className="book-viewer">
       <div className="book-viewer-header">
@@ -59,7 +59,7 @@ export default function BookViewer() {
             <>
               <div className="pdf-toolbar">
                 <span className="pdf-title">{selected.label}</span>
-                <a href={pdfUrl} download className="download-btn">
+                 <a href={pdfUrl} download className="download-btn">
                   ⬇ تحميل
                 </a>
               </div>
