@@ -53,10 +53,7 @@ export default function BookViewer() {
             <button
               key={vol.id}
               className={`volume-btn ${selected?.id === vol.id ? "active" : ""}`}
-              onClick={() => {
-                setSelected(vol);
-                window.open(`/pdfs/${id}/${vol.file}`, "_blank");
-              }}
+              onClick={() => setSelected(vol)}
             >
               {vol.label}
             </button>
