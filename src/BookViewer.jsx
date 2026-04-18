@@ -1,21 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+// const volumes = [
+//   { id: 1,  label: "المجاد الأول",        file: "مجلد1.pdf" },
+//   { id: 2,  label: "المجلد الثاني",   file: "مجلد2.pdf" }
+// ];
+
 const volumes = [
-  { id: 1,  label: "المقدمة",        file: "00_54495.pdf" },
-  { id: 2,  label: "المجلد الأول — الجزء الأول",   file: "01_54495p1.pdf" },
-  { id: 3,  label: "المجلد الأول — الجزء الثاني",   file: "01_54495p2.pdf" },
-  { id: 4,  label: "المجلد الأول — الجزء الثالث",   file: "01_54495p3.pdf" },
-  { id: 5,  label: "المجلد الأول",   file: "01_54495.pdf" },
-  { id: 6,  label: "المجلد الثاني",  file: "02_54496.pdf" },
-  { id: 7,  label: "المجلد الثالث",  file: "03_54504.pdf" },
-  { id: 8,  label: "المجلد الرابع",  file: "04_54505.pdf" },
-  { id: 9,  label: "المجلد الخامس",  file: "05_54497.pdf" },
-  { id: 10, label: "المجلد السادس",  file: "06_54498.pdf" },
-  { id: 11, label: "المجلد السابع",  file: "07_54506.pdf" },
-  { id: 12, label: "المجلد الثامن",  file: "08_54507.pdf" },
-  { id: 13, label: "المجلد التاسع",  file: "09_54508.pdf" },
-];
+  {id:1 , name : "bukhari", books : [{id:1, label : "المجلد الأول", file : "مجلد1.pdf"],[id:2, label : "المجلد الثاني", file : "مجلد2.pdf"]},
+]
 
 export default function BookViewer() {
   const [selected, setSelected] = useState(null);
@@ -28,7 +21,7 @@ export default function BookViewer() {
     <div className="book-viewer">
       <div className="book-viewer-header">
         <Link to="/books" className="back-btn">← العودة للكتب</Link>
-        <h2>صحيح البخاري — ط السلطانية</h2>
+        <h2>صحيح البخاري - ت البغا</h2>
         <p>اختر المجلد الذي تريد قراءته</p>
       </div>
 
