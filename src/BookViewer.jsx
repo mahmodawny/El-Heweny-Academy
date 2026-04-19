@@ -58,13 +58,61 @@ const allBooks = [
       { id: 5, label: "المجلد الخامس", file: "vol5.pdf" },
       { id: 6, label: "المجلد السادس", file: "vol6.pdf" }
     ]
+  },
+  {
+    name: "el_termithy",
+    title: "سنن الترمذي",
+    volumes: [
+      { id: 1, label: "المجلد الأول",  file: "vol1.pdf" },
+      { id: 2, label: "المجلد الثاني", file: "vol2.pdf" },
+      { id: 3, label: "المجلد الثالث", file: "vol3.pdf" },
+      { id: 4, label: "المجلد الرابع", file: "vol4.pdf" },
+      { id: 5, label: "المجلد الخامس", file: "vol5.pdf" },
+      { id: 6, label: "المجلد السادس", file: "vol6.pdf" },
+      { id: 7, label: "المجلد السابع", file: "vol7.pdf" },
+    ]  
+  },
+  {
+    name: "ibnmajah",
+    title: "سنن ابن ماجه",
+    volumes:[
+      { id: 1, label: "المجلد الأول",  file: "vol1.pdf" },
+      { id: 2, label: "المجلد الثاني", file: "vol2.pdf" },
+      { id: 3, label: "المجلد الثالث", file: "vol3.pdf" },
+      { id: 4, label: "المجلد الرابع", file: "vol4.pdf" },
+      { id: 5, label: "المجلد الخامس", file: "vol5.pdf" },
+      { id: 6, label: "المجلد السادس", file: "vol6.pdf" },
+      { id: 7, label: "المجلد السابع", file: "vol7.pdf" }
+    ]
+  },
+  {
+    name: "nassaey",
+    title: "السنن الكبري للنسائي",
+    volumes:[
+      { id: 1, label: "المجلد الأول",  file: "vol1.pdf" },
+      { id: 2, label: "المجلد الثاني", file: "vol2.pdf" },
+      { id: 3, label: "المجلد الثالث", file: "vol3.pdf" },
+      { id: 4, label: "المجلد الرابع", file: "vol4.pdf" },
+      { id: 5, label: "المجلد الخامس", file: "vol5.pdf" },
+      { id: 6, label: "المجلد السادس", file: "vol6.pdf" },
+      { id: 7, label: "المجلد السابع", file: "vol7.pdf" },
+      { id: 8, label: "المجلد الثامن", file: "vol8.pdf" },
+      { id: 9, label: "المجلد التاسع", file: "vol9.pdf" },
+      { id: 10, label: "المجلد العاشر", file: "vol10.pdf" },
+      { id: 11, label: "المجلد الحادي عشر", file: "vol11.pdf" },
+      { id: 12, label: "المجلد الثاني عشر", file: "vol12.pdf" }
+    ]
   }
 ];
+
+
+
 
 export default function BookViewer() {
   const { id } = useParams();
   const [selected, setSelected] = useState(null);
 
+  
   const currentBook = allBooks.find((book) => book.name === id);
   const pdfUrl = selected ? `/pdfs/${id}/${selected.file}` : null;
 
