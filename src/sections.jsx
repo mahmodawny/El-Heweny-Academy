@@ -14,7 +14,7 @@ export default function Sections(){
            <Link to="/">خطب</Link>  
          </li>
          <li>
-           <Link to="/">منشورات</Link>  
+           <Link to="/posts">منشورات</Link>
          </li>
          <li>
            <Link to="/lessons">دروس مصطلح الحديث</Link>

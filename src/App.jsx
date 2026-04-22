@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./header";
+import Home from "./Home";
 import Posts from "./posts";
 import Feedback from "./feedback";
 import Lessons from "./Lessons";
@@ -15,16 +16,9 @@ export default function App() {
       <Sections />
 
       <main>
-
-      
         <Routes>
-
-          <Route path="/" element={<> <Posts /> 
-            <Feedback />
-              </>
-            }
-          />
-
+          <Route path="/" element={<Home />} />
+          <Route path="/posts" element={<> <Posts /> <Feedback /> </>} />
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/books" element={<Books />} />
           <Route path="/book/:id" element={<BookViewer />} />
