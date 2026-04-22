@@ -25,11 +25,6 @@ export default function Home() {
     },
   ];
 
-  const stats = [
-    { value: "٣", label: "كتب متاحة" },
-    { value: "٨+", label: "مصطلح حديثي" },
-    { value: "١٠٠٪", label: "مجاني وبلا قيود" },
-  ];
 
   return (
     <div className="home">
@@ -46,8 +41,8 @@ export default function Home() {
         </p>
         <div className="hero-quote">
           <span className="quote-mark">❝</span>
-          <p>مَن سلَك طريقًا يلتمس فيه علمًا سهَّل اللهُ له طريقًا إلى الجنة</p>
-          <span className="quote-source">صحيح مسلم</span>
+          <p> مَن يُرِدِ اللهُ به خَيرًا يُفَقِّهْه في الدِّينِ</p>
+          <span className="quote-source">صحيح البخاري</span>
         </div>
         <div className="hero-actions">
           <Link to="/books" className="btn-primary">تصفّح الكتب</Link>
@@ -55,14 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="stats-bar">
-        {stats.map((s, i) => (
-          <div className="stat-item" key={i}>
-            <span className="stat-value">{s.value}</span>
-            <span className="stat-label">{s.label}</span>
-          </div>
-        ))}
-      </section>
+     
 
       <section className="features">
         <h2 className="section-title">ماذا تجد في الأكاديمية؟</h2>
