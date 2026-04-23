@@ -521,7 +521,8 @@ main {
 /* ===================== LESSONS & BOOKS ===================== */
 
 .lessons,
-.books {
+.books,
+.sunnah{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -529,7 +530,8 @@ main {
 }
 
 .lessons > h1,
-.books > h1 {
+.books > h1,
+.sunnah > h1{
   font-size: 1.6rem;
   font-weight: 800;
   margin-bottom: 28px;
@@ -542,7 +544,8 @@ main {
 }
 
 .lessons > h1::after,
-.books > h1::after {
+.books > h1::after,
+..sunnah > h1::after{
   content: '';
   position: absolute;
   bottom: -2px;
@@ -555,7 +558,8 @@ main {
 }
 
 .lessons-container,
-.books-container {
+.books-container,
+.sunnah-container{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -563,7 +567,8 @@ main {
 }
 
 .lesson,
-.book {
+.book,
+.sunnah{
   background: var(--surface);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -575,14 +580,16 @@ main {
 }
 
 .lesson:hover,
-.book:hover {
+.book:hover
+.sunnah:hover{
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: #d4cfc6;
 }
 
 .lesson img,
-.book img {
+.book img,
+.sunnah img{
   width: 100%;
   height: 190px;
   object-fit: cover;
@@ -591,12 +598,14 @@ main {
 }
 
 .lesson:hover img,
-.book:hover img {
+.book:hover img,
+.sunnah:hover img{
   transform: scale(1.04);
 }
 
 .lesson-info,
-.book-info {
+.book-info ,
+.sunnah-info{
   padding: 14px 16px;
   display: flex;
   justify-content: space-between;
@@ -607,7 +616,9 @@ main {
 }
 
 .lesson-info h2,
-.book-info h2 {
+.book-info h2 ,
+.sunnah-info h2,
+.sunnah-info p{
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);

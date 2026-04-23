@@ -7,6 +7,7 @@ import Books from "./books";
 import BookViewer from "./BookViewer";
 import Sections from "./sections";
 import Home from "./Home";
+import Sunnah from "./sunnah";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
 
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/books" element={<Books />} />
+          <Route path="/sunnah" element={<Sunnah />} />
           <Route path="/book/:id" element={<BookViewer />} />
         </Routes>
       </main>
