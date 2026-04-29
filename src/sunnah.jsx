@@ -11,7 +11,7 @@ export default function Sunnah() {
         {
           sunnahLessons.map((lesson)=>{
             return(
-              <div className="sunnah-lesson">
+              <div className="sunnah-lesson" key={lesson.id}>
                 <img src={lesson.img} alt="" />
                 <div className="lesson-info">
                 <h2>{lesson.title}</h2>
