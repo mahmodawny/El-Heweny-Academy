@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import IbnOthimeen from "./assets/Ibn Othimeen.jpg";
 export default function Sunnah() {
   let sunnahLessons = [
-    {id:1 , title: "شرح الأربعين النووية" ,scientist: "الشيخ محمد بن صالح العثيمين" ,img: IbnOthimeen },
-    {id:2 , title: "شرح الأربعين النووية" ,scientist: "الشيخ محمد بن صالح العثيمين" ,img: IbnOthimeen },
+    {id:1 , title: "شرح الأربعين النووية" ,scientist: "الشيخ محمد بن صالح العثيمين" ,img: IbnOthimeen , hasViewer:false}
   ]
   return (
     <div className="sunnah">
@@ -17,6 +17,16 @@ export default function Sunnah() {
                 <h2>{lesson.title}</h2>
                 <p>{lesson.scientist}</p>
                 </div>
+                {
+                  lesson.hasViewer ?(
+                    <Link to={`/sunnah/${lesson.id}`} className="view-link">
+                      مشاهدة
+                    </Link>    
+                  ):(
+                    <button className="view-link disabled">قريباً</button>
+                  )
+                }
+                
               </div>
             )
           })

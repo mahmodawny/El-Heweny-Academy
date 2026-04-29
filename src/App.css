@@ -521,7 +521,8 @@ main {
 /* ===================== LESSONS & BOOKS ===================== */
 
 .lessons,
-.books {
+.books
+{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -529,7 +530,8 @@ main {
 }
 
 .lessons > h1,
-.books > h1 {
+.books > h1
+{
   font-size: 1.6rem;
   font-weight: 800;
   margin-bottom: 28px;
@@ -542,7 +544,8 @@ main {
 }
 
 .lessons > h1::after,
-.books > h1::after {
+.books > h1::after
+{
   content: '';
   position: absolute;
   bottom: -2px;
@@ -555,7 +558,8 @@ main {
 }
 
 .lessons-container,
-.books-container {
+.books-container
+{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -563,7 +567,8 @@ main {
 }
 
 .lesson,
-.book {
+.book
+{
   background: var(--surface);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -575,14 +580,16 @@ main {
 }
 
 .lesson:hover,
-.book:hover {
+.book:hover
+{
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: #d4cfc6;
 }
 
 .lesson img,
-.book img {
+.book img
+{
   width: 100%;
   height: 190px;
   object-fit: cover;
@@ -591,12 +598,14 @@ main {
 }
 
 .lesson:hover img,
-.book:hover img {
+.book:hover img
+{
   transform: scale(1.04);
 }
 
 .lesson-info,
-.book-info {
+.book-info
+{
   padding: 14px 16px;
   display: flex;
   justify-content: space-between;
@@ -607,7 +616,8 @@ main {
 }
 
 .lesson-info h2,
-.book-info h2 {
+.book-info h2
+{
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
@@ -700,17 +710,48 @@ main {
   background: var(--surface);  
 }
 
+.sunnah-lesson .lesson-info h2{
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+.sunnah-lesson .lesson-info p{
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+
+
 /* ===================== VIEW LINK (books) ===================== */
 
 .view-link {
   text-decoration: none;
   background: var(--primary);
   color: #fff;
-  font-size: 0.78rem;
+  font-size: 1.2rem;
   font-weight: 700;
   padding: 7px 16px;
+  margin: 10px;
+  display:flex;
+  justify-content: center;  
+  align-items: center;
   border-radius: 50px;
   letter-spacing: 0.03em;
+  border:none;
   white-space: nowrap;
   transition: all 0.25s ease;
   flex-shrink: 0;
