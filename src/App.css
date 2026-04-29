@@ -521,8 +521,7 @@ main {
 /* ===================== LESSONS & BOOKS ===================== */
 
 .lessons,
-.books,
-.sunnah{
+.books {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -530,8 +529,7 @@ main {
 }
 
 .lessons > h1,
-.books > h1,
-.sunnah > h1{
+.books > h1 {
   font-size: 1.6rem;
   font-weight: 800;
   margin-bottom: 28px;
@@ -544,8 +542,7 @@ main {
 }
 
 .lessons > h1::after,
-.books > h1::after,
-..sunnah > h1::after{
+.books > h1::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -558,8 +555,7 @@ main {
 }
 
 .lessons-container,
-.books-container,
-.sunnah-container{
+.books-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -567,8 +563,7 @@ main {
 }
 
 .lesson,
-.book,
-.sunnah{
+.book {
   background: var(--surface);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -580,16 +575,14 @@ main {
 }
 
 .lesson:hover,
-.book:hover
-.sunnah:hover{
+.book:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: #d4cfc6;
 }
 
 .lesson img,
-.book img,
-.sunnah img{
+.book img {
   width: 100%;
   height: 190px;
   object-fit: cover;
@@ -598,14 +591,12 @@ main {
 }
 
 .lesson:hover img,
-.book:hover img,
-.sunnah:hover img{
+.book:hover img {
   transform: scale(1.04);
 }
 
 .lesson-info,
-.book-info ,
-.sunnah-info{
+.book-info {
   padding: 14px 16px;
   display: flex;
   justify-content: space-between;
@@ -616,9 +607,7 @@ main {
 }
 
 .lesson-info h2,
-.book-info h2 ,
-.sunnah-info h2,
-.sunnah-info p{
+.book-info h2 {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
@@ -652,6 +641,63 @@ main {
   background: var(--primary-dark);
   transform: translateY(-1px);
   box-shadow: 0 5px 14px rgba(26,79,110,.35);
+}
+
+/* Sunnah */
+
+.sunnah{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.sunnah-lessons{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 20px
+  }
+
+.sunnah-lesson{
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.sunnah-lesson:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: #d4cfc6;
+}
+
+.sunnah-lesson img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.sunnah-lesson:hover img{
+  transform: scale(1.04);
+}
+
+.sunnah-lesson .lesson-info{
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);  
 }
 
 /* ===================== VIEW LINK (books) ===================== */
