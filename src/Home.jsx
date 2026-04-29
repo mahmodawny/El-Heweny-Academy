@@ -44,10 +44,7 @@ export default function Home() {
           <p> مَن يُرِدِ اللهُ به خَيرًا يُفَقِّهْه في الدِّينِ</p>
           <span className="quote-source">صحيح البخاري</span>
         </div>
-        <div className="hero-actions">
-          <Link to="/books" className="btn-primary">تصفّح الكتب</Link>
-          <Link to="/lessons" className="btn-secondary">شاهد الدروس</Link>
-        </div>
+
       </section>
 
      
