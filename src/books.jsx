@@ -13,7 +13,7 @@ export default function Books() {
     { id: "ibnmajah",title: "سنن ابن ماجه", img: IbnMajah,     hasViewer: true },
     { id: "aboDawood", title: "مسند أبو داود", img: AboDawood,   hasViewer: true },
     { id: "el_termithy",title: "سنن الترمذي",  img: El_Termithy,  hasViewer: true },
-    { id: "nassaey", title: "السنن الكبري للنسائي",   img: El_nassaey,   hasViewer: true },
+    { id: "nassaey", title: "السنن الكبري للنسائي",   img: El_nassaey,   hasViewer: false },
   ];
 
   return (
@@ -30,7 +30,7 @@ export default function Books() {
                   مشاهدة
                 </Link>
               ) : (
-                <span className="view-link disabled">قريباً</span>
+               <Button variant="contained" disabled>قريباً</Button>
               )}
             </div>
           </div>
