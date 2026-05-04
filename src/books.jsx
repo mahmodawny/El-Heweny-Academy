@@ -8,12 +8,12 @@ import IbnMajah from "./assets/Ibn Majah.jpg";
 import Button from '@mui/material/Button';
 export default function Books() {
   const booksData = [
-    { id: "bukhari", title: "صحيح البخاري",  img: ElBokhary,    hasViewer: true  },
+    { id: "bukhari", title: "صحيح البخاري",  img: ElBokhary,    hasViewer: false  },
     { id: "muslim",  title: "صحيح مسلم",     img: Muslim,       hasViewer: true },
     { id: "ibnmajah",title: "سنن ابن ماجه", img: IbnMajah,     hasViewer: true },
     { id: "aboDawood", title: "مسند أبو داود", img: AboDawood,   hasViewer: true },
     { id: "el_termithy",title: "سنن الترمذي",  img: El_Termithy,  hasViewer: true },
-    { id: "nassaey", title: "السنن الكبري للنسائي",   img: El_nassaey,   hasViewer: false },
+    { id: "nassaey", title: "السنن الكبري للنسائي",   img: El_nassaey,   hasViewer: true },
   ];
 
   return (
