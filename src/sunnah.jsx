@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import IbnOthimeen from "./assets/Ibn Othimeen.jpg";
+import ElHeweny from "./assets/ElHeweny.jpg"
 export default function Sunnah() {
   let sunnahLessons = [
-    {id:1 , title: "شرح الأربعين النووية" ,scientist: "الشيخ محمد بن صالح العثيمين" ,img: IbnOthimeen , hasViewer:false}
+    {id:1 , title: "شرح الأربعين النووية" ,scientist: "الشيخ محمد بن صالح العثيمين" ,img: IbnOthimeen , hasViewer:false},
+    {id:2 ,title:"فك الوثاق في شرح كتاب الرقاق", scientist:"الشيخ أبي إسحاق الحويني", img:ElHeweny, hasViewer:false
+    }
   ]
   return (
     <div className="sunnah">
