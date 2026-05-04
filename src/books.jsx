@@ -5,6 +5,7 @@ import AboDawood from "./assets/Abo Dawood.jpg";
 import El_Termithy from "./assets/El-Termithy.jpg";
 import El_nassaey from "./assets/El-nassaey.jpg";
 import IbnMajah from "./assets/Ibn Majah.jpg";
+import Button from '@mui/material/Button';
 export default function Books() {
   const booksData = [
     { id: "bukhari", title: "صحيح البخاري",  img: ElBokhary,    hasViewer: true  },
