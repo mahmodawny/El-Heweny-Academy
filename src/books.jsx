@@ -8,7 +8,7 @@ import IbnMajah from "./assets/Ibn Majah.jpg";
 import Button from '@mui/material/Button';
 export default function Books() {
   const booksData = [
-    { id: "bukhari", title: "صحيح البخاري",  img: ElBokhary,    hasViewer: false  },
+    { id: "bukhari", title: "صحيح البخاري",  img: ElBokhary,    hasViewer: true  },
     { id: "muslim",  title: "صحيح مسلم",     img: Muslim,       hasViewer: true },
     { id: "ibnmajah",title: "سنن ابن ماجه", img: IbnMajah,     hasViewer: true },
     { id: "aboDawood", title: "مسند أبو داود", img: AboDawood,   hasViewer: true },
@@ -26,11 +26,11 @@ export default function Books() {
             <div className="book-info">
               <h2>{book.title}</h2>
               {book.hasViewer ? (
-                <Link to={`/book/${book.id}`} className="view-link">
+                <Button variant="contained" component={Link} to={`/book/${book.id}`}>
                   مشاهدة
-                </Link>
+                </Button>
               ) : (
-               <Button variant="contained" disabled>قريباً</Button>
+                <Button variant="contained" disabled>قريباً</Button>
               )}
             </div>
           </div>
