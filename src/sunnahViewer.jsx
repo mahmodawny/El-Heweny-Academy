@@ -6,7 +6,7 @@ const allLessons = [
     name: "IbnOthimeen",
     title: "شرح الأربعين النووية",
     volumes: [
-      { id: 1, title: "الحديث الأول", url: "" },
+      { id: 1, title: "الحديث الأول", url: "https://www.youtube.com/embed/LS3DsGsNQ-Q" },
       { id: 2, title: "الحديث الثاني", url: "" },
       { id: 3, title: "الحديث الثالث", url: "" },
       { id: 4, title: "الحديث الرابع", url: "" },
