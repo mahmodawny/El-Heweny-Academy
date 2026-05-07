@@ -6,10 +6,10 @@ const allLessons = [
     name: "IbnOthimeen",
     title: "شرح الأربعين النووية",
     volumes: [
-      { id: 1, title: "الحديث الأول", url: "https://www.youtube.com/embed/LS3DsGsNQ-Q" },
-      { id: 2, title: "الحديث الثاني", url: "" },
-      { id: 3, title: "الحديث الثالث", url: "" },
-      { id: 4, title: "الحديث الرابع", url: "" },
+      { id: 1, title: "الحديث الأول", url: "https://www.youtube.com/embed/LS3DsGsNQ-Q?si=urB-OfsevZBqmSPK" },
+      { id: 2, title: "الحديث الثاني", url: "https://www.youtube.com/embed/emcdkcWhAk8?si=Pdj2LzBIiE54At5m" },
+      { id: 3, title: "الحديث الثالث", url: "https://www.youtube.com/embed/QnSAwo1t1to?si=NnMHQvLdOm-q2QxT" },
+      { id: 4, title: "الحديث الرابع", url: "https://www.youtube.com/embed/iKK6344AWPU?si=_58OYxdhMZ6JnjlE" },
       { id: 5, title: "الحديث الخامس", url: "" },
       { id: 6, title: "الحديث السادس", url: "" },
       { id: 7, title: "الحديث السابع", url: "" },
@@ -54,7 +54,7 @@ const allLessons = [
     name: "ElHeweny",
     title: "فك الوثاق في شرح كتاب الرقاق",
     volumes: [
-      { id: 1, title: "الدرس الأول", url: "" },
+      { id: 1, title: "الدرس الأول", url: "https://www.youtube.com/embed/KOCyo1JsIqU?si=2h04swuVCQcEKUip" },
       { id: 2, title: "الدرس الثاني", url: "" },
       { id: 3, title: "الدرس الثالث", url: "" },
       { id: 4, title: "الدرس الرابع", url: "" }

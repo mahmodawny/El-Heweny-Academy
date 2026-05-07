@@ -5,7 +5,7 @@ import ElHeweny from "./assets/ElHeweny.jpg";
 export default function Sunnah() {
   let sunnahLessons = [
     { id: 1, name: "IbnOthimeen", title: "شرح الأربعين النووية", scientist: "الشيخ محمد بن صالح العثيمين", img: IbnOthimeen, hasViewer: true },
-    { id: 2, name: "ElHeweny", title: "فك الوثاق في شرح كتاب الرقاق", scientist: "الشيخ أبي إسحاق الحويني", img: ElHeweny, hasViewer: false }
+    { id: 2, name: "ElHeweny", title: "فك الوثاق في شرح كتاب الرقاق", scientist: "الشيخ أبي إسحاق الحويني", img: ElHeweny, hasViewer: true }
   ]
   return (
     <div className="sunnah">
